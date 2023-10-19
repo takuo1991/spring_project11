@@ -21,7 +21,7 @@ public class AnimalsAPIController {
 		this.animalsAPIService = animalsAPIService;
 	}
 
-	@GetMapping("/animalsSearch")
+	@GetMapping("animalsSearch")
 	public String getPets(Model model) throws IOException {
 
 		List<Animals> animalsList = animalsAPIService.getAnimals();
@@ -31,8 +31,8 @@ public class AnimalsAPIController {
 		return "animalsSearch.html";
 	}
 
-	@PostMapping("/animalsSearch")
-	public String searchAnimal(@RequestParam(name = "animalSelection") String animalName, Model model)
+	@PostMapping("animalsSearch")
+	public String searchAnimal(@RequestParam String animalName, Model model)
 			throws IOException {
 
 		Optional<Animals> optionalAnimal = animalsAPIService.getAnimalByName(animalName);

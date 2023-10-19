@@ -23,15 +23,10 @@ public class MinusController {
 	}
 
 	@PostMapping("minus")
-	public String doGet(@RequestParam(value = "from", defaultValue = "0") int from,
-			@RequestParam(value = "subtract", defaultValue = "0") int subtract, Model model) {
+	public String doGet(@RequestParam int from,
+			@RequestParam int subtract, Model model) {
 
-		model.addAttribute("from", from);
-		model.addAttribute("subtract", subtract);
-
-		String result = "";
-
-		result = String.valueOf(minusService.minus(from, subtract));
+		int result = minusService.minus(from, subtract);
 
 		model.addAttribute("result", result);
 

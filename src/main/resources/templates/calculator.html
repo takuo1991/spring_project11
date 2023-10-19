@@ -7,21 +7,19 @@
 </head>
 
 <body>
-	<div th:each="i : ${#numbers.sequence(1, 4)}">
-		<h1>計算機</h1>
-		<form th:action="@{/calculator}" method="post" style="margin-bottom: 90px;">
-			<input type="number" th:name="${'from' + i}" th:value="${session['from' + i]}">
-			<select th:name="${'operation' + i}">
-				<option value="add">+</option>
-				<option value="subtract">-</option>
-				<option value="multiply">×</option>
-				<option value="divide">÷</option>
-			</select>
-			<input type="number" th:name="${'to' + i}" th:value="${session['to' + i]}">
-			<button type="submit">=</button>
-		</form>
-		<p th:text="${session['result' + i]}" style="font-weight: 700;"></p><br>
-	</div>
+	<h1>計算機</h1>
+	<form th:action="@{/calculator}" method="post" style="margin-bottom: 60px;">
+		<input type="number" name="from" required>
+		<select name="operation">
+			<option value="add">+</option>
+			<option value="subtract">-</option>
+			<option value="multiply">×</option>
+			<option value="divide">÷</option>
+		</select>
+		<input type="number" name="to"required>
+		<button type="submit">=</button>
+	</form>
+	<p th:text="${result}" style="font-weight: 700;"></p><br>
 </body>
 
 </html>
