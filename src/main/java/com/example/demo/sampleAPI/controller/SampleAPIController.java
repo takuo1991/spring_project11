@@ -19,7 +19,7 @@ public class SampleAPIController {
 		this.sampleAPIService = sampleAPIService;
 	}
 
-	@GetMapping("/sampleAPI")
+	@GetMapping("sampleAPI")
 	public String getPets(Model model) throws IOException {
 
 		List<Animals> animalsList = sampleAPIService.getAnimals();
