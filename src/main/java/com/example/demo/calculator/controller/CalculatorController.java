@@ -24,7 +24,7 @@ public class CalculatorController {
 	}
 
 	@PostMapping("calculator")
-	public String calculate(@RequestParam int from,
+	public String calculate(@RequestParam int from, 
 			@RequestParam int to, String operation, Model model) {
 
 		int result = calculatorService.calculator(from, to, operation);
