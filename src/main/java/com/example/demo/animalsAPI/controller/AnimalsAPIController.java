@@ -21,13 +21,9 @@ public class AnimalsAPIController {
 	}
 
 	@GetMapping("animalsSearch")
-	public String getPets(Model model) throws IOException {
+	public String getHome() {
 
-		List<Animals> animalsList = animalsAPIService.getAnimals();
-
-		model.addAttribute("animalsList", animalsList);
-
-		return "animalsSearch.html";
+		return "animalsSearch";
 	}
 
 	@PostMapping("animalsSearch")
