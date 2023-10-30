@@ -10,7 +10,7 @@
 	<h1>動物検索画面</h1>
 	<form method="post" th:action="@{/animalsSearch}">
 		<select name="animalName">
-			<option th:each="animal : ${animals}" th:text="${animal.japaneseName}"></option>
+			<option th:each="animal : ${animalsList}" th:text="${animal.japaneseName}"></option>
 		</select>
 		<button type="submit">検索</button>
 	</form>

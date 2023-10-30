@@ -24,7 +24,7 @@ public class AnimalsAPIController {
 	public String selectAnimals(Model model) throws IOException {
 		List<Animals> animalsList = animalsAPIService.getAnimals();
 
-		model.addAttribute("animals", animalsList);
+		model.addAttribute("animalsList", animalsList);
 
 		return "animalsSearch";
 	}
