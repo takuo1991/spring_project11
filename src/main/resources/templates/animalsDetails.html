@@ -8,10 +8,21 @@
 
 <body>
 	<h1>動物の詳細</h1>
-		<p th:text="'No： ' + ${animal.id}"></p>
-		<p th:text="'英名： ' + ${animal.name}"></p>
-		<p th:text="'和名： ' + ${animal.japaneseName}"></p>
-		<p th:text="'鳴き声： ' + ${animal.cry}"></p>
+	<p th:text="'No： ' + ${animal.id}"></p>
+	<p th:text="'英名： ' + ${animal.name}"></p>
+	<p th:text="'和名： ' + ${animal.japaneseName}"></p>
+	<p th:text="'鳴き声： ' + ${animal.cry}"></p>
+	<br>
+
+	<button>
+		<a th:href="@{/animalsSearch}" class="goHome">動物検索画面へ</a>
+	</button>
 </body>
 
 </html>
+<style>
+	.goHome {
+		text-decoration: none;
+	}
+	
+</style>
